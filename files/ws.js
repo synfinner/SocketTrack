@@ -1,7 +1,7 @@
 function sTrack() {
             
    if ("WebSocket" in window) {
-      var ws = new WebSocket("ws://SERVER_URL:8080/");
+      var ws = new WebSocket("ws://SERVER_URL/sockettrack");
       // change to wss if using ssl.
 
       ws.onopen = function() {

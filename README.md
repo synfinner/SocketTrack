@@ -18,11 +18,11 @@ Be sure to change the `ws.js` file if moving to SSL!
 From: 
 
 ```
-var ws = new WebSocket("ws://SERVER_URL:8080/");
+var ws = new WebSocket("ws://SERVER_URL/sockettrack");
 ```
 
 To: 
 
 ```
-var ws = new WebSocket("wss://SERVER_URL:8080/");
+var ws = new WebSocket("wss://SERVER_URL/sockettrack");
 ```
