@@ -10,10 +10,11 @@ async def tracker(websocket, path):
     async for message in websocket:
         print("---NEW CONNECTION---")
         print("[+]Connection from: ",websocket.remote_address[0])
-        print("[+]Origin: ", message.rstrip())
+        print("[+]Origin: ", websocket.request_headers.get('origin'))
+        print("[+]Path: ", message.rstrip())
         print("[+]User-Agent: ", websocket.request_headers.get('user-agent'))
         print("---END CONNECTION---")
-        data = "Host: "+websocket.remote_address[0]+"\tUser-Agent: "+websocket.request_headers.get('user-agent')+"\tPath: "+message.rstrip()
+        data = "Host: "+websocket.remote_address[0]+"\tOrigin: "+websocket.request_headers.get('origin')+"\tUser-Agent: "+websocket.request_headers.get('user-agent')+"\tPath: "+message.rstrip()
         logging.info(data)
         break
 asyncio.get_event_loop().run_until_complete(websockets.serve(tracker, '0.0.0.0', 8080))
