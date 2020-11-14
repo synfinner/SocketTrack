@@ -1,5 +1,25 @@
 # SocketTrack
- Tracking with WebSocket and pywebsockets
+
+Tracking with WebSocket and pywebsockets
+
+## What is this?
+
+This is just a simple project to allow one to collect access data for sites. For example, import the js file, load it, and now you can track. 
+
+This will output the following in terminal (also logged):
+
+```
+---NEW CONNECTION---
+[+]Connection from:  192.168.2.54
+[+]Origin:  http://192.168.2.62:9000
+[+]Path:  /files/example.html
+[+]User-Agent:  Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Mobile/15E148 Safari/604.1
+---END CONNECTION---
+```
+
+**Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from.
+
+## SSL Notes
 
 
 It's recommended to use ssl on the SocketTrack endpoint/websocket server. In this case, we're using a reverse proxy via nginx and let's encrypt. 
