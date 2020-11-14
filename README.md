@@ -2,6 +2,14 @@
 
 Tracking with WebSocket and pywebsockets
 
+## Setup
+
+Install requirements: 
+
+```
+pip install -r requirements.txt
+```
+
 ## What is this?
 
 This is just a simple project to allow one to collect access data for sites. For example, import the js file, invoke the function, and now you can track. 
@@ -19,7 +27,7 @@ This will output the following in terminal (also logged):
 ---END CONNECTION---
 ```
 
-**Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from.
+**Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from. This is also relatively benign; a single message sent to the server and then the connection is closed. 
 
 ## SSL Notes
 
