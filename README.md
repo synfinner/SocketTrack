@@ -6,6 +6,8 @@ Tracking with WebSocket and pywebsockets
 
 This is just a simple project to allow one to collect access data for sites. For example, import the js file, invoke the function, and now you can track. 
 
+At the moment, this doesn't do anything too crazy. It's simply sends the current `document.location.pathname` via a WebSocket message. The rest of the data is obtained just by the WebSocket reqest headers.
+
 This will output the following in terminal (also logged):
 
 ```
