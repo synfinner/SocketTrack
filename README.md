@@ -4,7 +4,7 @@ Tracking with WebSocket and pywebsockets
 
 ## What is this?
 
-This is just a simple project to allow one to collect access data for sites. For example, import the js file, load it, and now you can track. 
+This is just a simple project to allow one to collect access data for sites. For example, import the js file, invoke the function, and now you can track. 
 
 This will output the following in terminal (also logged):
 
