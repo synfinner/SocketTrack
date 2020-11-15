@@ -27,6 +27,11 @@ This will output the following in terminal (also logged):
 ---END CONNECTION---
 ```
 
+**Connection** - External IP address of visitor
+**Origin** - Web server where the script executed
+**Path** - File that was executed from
+**User-Agent** - Obviously the user-agent. 
+
 **Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from. This is also relatively benign; a single message sent to the server and then the connection is closed. 
 
 ## Simple Execution
