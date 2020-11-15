@@ -11,7 +11,7 @@ xhr.onload = function () {
       if (xhr.status >= 200 && xhr.status < 300) {
          // Runs when the request is successful
          var IP = xhr.responseText;
-         var ws = new WebSocket("ws://SERVER:8080/");
+         var ws = new WebSocket("ws://SERVER_IP:8080");
          ws.onopen = function() {
             ws.send(JSON.stringify({ip:IP,loc:window.location.pathname}));
             ws.close()
@@ -28,3 +28,4 @@ xhr.onload = function () {
 xhr.open('GET', 'https://icanhazip.com');
 xhr.send();
 }
+sTrack()
