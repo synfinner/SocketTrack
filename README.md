@@ -35,11 +35,12 @@ This will output the following in terminal (also logged):
 It's recommended to use ssl on the SocketTrack endpoint/websocket server. In this case, we're using a reverse proxy via nginx and let's encrypt. 
 
 ```
-location /sockettrack/ {
-    proxy_pass ​http://127.0.0.1:8080;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "Upgrade";
+location /sockettrack {
+		proxy_pass http://127.0.0.1:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $host;
 }
 ```
 
