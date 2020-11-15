@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Simple websocket server. Nothing special
+
 import asyncio
 import websockets
 import logging
@@ -8,6 +10,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s',filename='socket_track.lo
 
 async def tracker(websocket, path):
     async for message in websocket:
+        # Load the JSON data from out client connection
         wData = json.loads(message)
         ip = wData['ip']
         ip = ip.rstrip()
