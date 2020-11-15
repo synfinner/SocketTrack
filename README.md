@@ -29,6 +29,16 @@ This will output the following in terminal (also logged):
 
 **Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from. This is also relatively benign; a single message sent to the server and then the connection is closed. 
 
+## Simple Execution
+
+Once you have the socket server running, anytime/anywhere you want to log requests, simply add the script into the html `<head>`
+
+```
+<head>
+  <script type = "text/javascript" src="ws.js"></script>
+</head>
+```
+
 ## SSL Notes
 
 
