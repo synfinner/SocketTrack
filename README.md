@@ -1,6 +1,6 @@
 # SocketTrack
 
-Tracking with WebSocket and pywebsockets
+Tracking with WebSocket, XHR, and pywebsockets
 
 ## Setup
 
