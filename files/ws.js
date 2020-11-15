@@ -1,15 +1,30 @@
 function sTrack() {
-            
-   if ("WebSocket" in window) {
-      var ws = new WebSocket("ws://SERVER_URL/sockettrack");
-      // change to wss if using ssl.
 
-      ws.onopen = function() {
-         var loc = window.location.pathname
-         ws.send(loc);
-         ws.close()
-      };
+// Set up our HTTP request
+var xhr = new XMLHttpRequest();
+
+// Setup our listener to process completed requests
+xhr.onload = function () {
+   if ("WebSocket" in window) {
+
+      // Process our return data
+      if (xhr.status >= 200 && xhr.status < 300) {
+         // Runs when the request is successful
+         var IP = xhr.responseText;
+         var ws = new WebSocket("ws://SERVER:8080/");
+         ws.onopen = function() {
+            ws.send(JSON.stringify({ip:IP,loc:window.location.pathname}));
+            ws.close()
+         };
+      } else {
+         // Runs when it's not
+         return false;
+      }
    } else {
       return false;
    }
+
+};
+xhr.open('GET', 'https://icanhazip.com');
+xhr.send();
 }
