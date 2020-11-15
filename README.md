@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 This is just a simple project to allow one to collect access data for sites. For example, import the js file, invoke the function, and now you can track. 
 
-At the moment, this doesn't do anything too crazy. It's simply sends the current `document.location.pathname` via a WebSocket message. The rest of the data is obtained just by the WebSocket reqest headers.
+This script will perform an XHR to grab the client's external IP address, the orgin web server where the request was initiated, the path/resource where this was loaded, and the user-agent. 
 
 This will output the following in terminal (also logged):
 
@@ -56,3 +56,7 @@ To:
 ```
 var ws = new WebSocket("wss://SERVER_URL/sockettrack");
 ```
+
+## Disclaimer
+
+*This script is served as-is and is part of an educational project for research purposes. I am not responsible for your actions with this script.*
