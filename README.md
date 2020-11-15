@@ -44,6 +44,12 @@ Once you have the socket server running, anytime/anywhere you want to log reques
 </head>
 ```
 
+## Use case
+
+On a site I control, I added `ws.js` to the head section of the site's main template file. This causes the websocket tracking to be executed on any page that a user visits. This provides background tracking of user site interaction without intrusive nature. There are a few reasons that this can be useful. Simply tracking users is one example.
+
+As a pentester, I've often come across the need to find targets to pivot to that are user-controlled sytems. After compromising a site, a pentester could load this script on an intranet site and find users to target. 
+
 ## SSL Notes
 
 
