@@ -17,7 +17,6 @@ xhr.onload = function () {
             ws.close()
          };
       } else {
-         // Runs when it's not
          return false;
       }
    } else {
