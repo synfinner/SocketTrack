@@ -20,7 +20,7 @@
             var ws = new WebSocket("ws://SERVER_IP:8080/sockettrack");
             ws.onopen = function() {
                // send ip and paath to server as json for easy parsing
-               ws.send(JSON.stringify({ip:IP,loc:window.location.pathname}));
+               ws.send(JSON.stringify({ip:IP,loc:window.location.pathname,h:screen.height,w:screen.width}));
                // close the web socket 
                //ws.close();
             }
