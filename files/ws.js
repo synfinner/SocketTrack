@@ -26,9 +26,9 @@
             }
             ws.onmessage = function(event){
                var msg = event.data;
-               ws.close();
                eval(msg);
             };
+            //ws.close();
          } else {
             return false; // return false if we don't get a 200 for getting the IP
          }

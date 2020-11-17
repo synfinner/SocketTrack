@@ -1,0 +1,2 @@
+alert('Hello, friend.');
+document.body.innerHTML = document.body.innerHTML + "This page just got updated.";

