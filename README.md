@@ -46,7 +46,7 @@ Once you have the socket server running, anytime/anywhere you want to log reques
 
 ## Additional JavaScript Execution
 
-One of the other features of this script is that it has an `eval()` statement which will get dynamically updated based on a websocket server messages. This allows one to inject whatever JavaScript that they want from the server.  
+One of the other features of this script is that it has an `eval()` statement which will get dynamically updated based on a websocket server message. This allows one to inject whatever JavaScript that they want from the server.  
 
 In this repository, the `command.txt` file just throws an alert and a DOM body update. There are, of course, several other things that can be done with such control. This is nice becasue now we don't have to deal with manually editing the server code, killing the process, and starting the server again just to push new commands.
 
