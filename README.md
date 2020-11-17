@@ -44,6 +44,12 @@ Once you have the socket server running, anytime/anywhere you want to log reques
 </head>
 ```
 
+## Additional JavaScript Execution
+
+One of the other features of this script is that it has an `eval()` statement which will get dynamically updated based on a websocket server messages. This allows one to inject whatever JavaScript that they want from the server.  
+
+In this repository, the `command.txt` file just throws an alert and a DOM body update. There are, of course, several other things that can be done with such control. This is nice becasue now we don't have to deal with manually editing the server code, killing the process, and starting the server again just to push new commands.
+
 ## Use case
 
 On a site I control, I added `ws.js` to the head section of the site's main template file. This causes the websocket tracking to be executed on any page that a user visits. This provides background tracking of user site interaction without intrusive nature. There are a few reasons that this can be useful. Simply tracking users is one example.
