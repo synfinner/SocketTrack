@@ -24,6 +24,7 @@ This will output the following in terminal (also logged):
 [+]Origin:  http://192.168.2.62:9000
 [+]Path:  /files/example.html
 [+]User-Agent:  Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Mobile/15E148 Safari/604.1
+[+]Screen Dimmensions:  1792 x 1120
 ---END CONNECTION---
 ```
 
@@ -31,6 +32,7 @@ This will output the following in terminal (also logged):
 - **Origin** - Web server where the script executed
 - **Path** - File that was executed from
 - **User-Agent** - Obviously the user-agent. 
+- **Screen Dimmensions** - Screen data provided by `screen.height` and `screen.width`
 
 **Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from. This is also relatively benign; a single message sent to the server and then the connection is closed. Unless you decided to play with [executing more JavaScript](https://github.com/synfinner/SocketTrack#additional-javascript-execution)
 
