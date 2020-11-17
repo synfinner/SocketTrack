@@ -32,7 +32,7 @@ This will output the following in terminal (also logged):
 - **Path** - File that was executed from
 - **User-Agent** - Obviously the user-agent. 
 
-**Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from. This is also relatively benign; a single message sent to the server and then the connection is closed. 
+**Why would I want this?** I don't know. You never know when you'd want to see where traffic is coming from. This is also relatively benign; a single message sent to the server and then the connection is closed. Unless you decided to play with [executing more JavaScript](https://github.com/synfinner/SocketTrack#additional-javascript-execution)
 
 ## Simple Execution
 
